@@ -34,7 +34,7 @@ def generate_identity(university_name):
     with open(f"{folder}/info.json", "w") as f:
         json.dump(info, f, indent=2)
 
-    print(f"✅ تم إنشاء هوية جامعة: {university_name}")
+    print(f"✅ University identity created : {university_name}")
 
 if __name__ == "__main__":
     generate_identity("UQU")
