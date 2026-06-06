@@ -79,17 +79,16 @@ if __name__ == "__main__":
         name = input("Student Name: ")
         major = input("Major: ")
         date = input("Grad Date (YYYY-MM): ")
-
+        
         # Step 1: Prepare the data
         final_diploma_data = build_diploma_data(name, major, date, university_name, uni_id)
-
+        print(f"\n diploma structured successfully..")
         # Step 2: Generate hash
         final_hash = generate_sha256_hash(final_diploma_data)
 
-        print("\n Structured Diploma Data:")
-        print(json.dumps(final_diploma_data, indent=2))
-        print(f"\n Digital Fingerprint (Hash): {final_hash}")
-
+       
+       # print(f"\n Digital Fingerprint (Hash): {final_hash}")
+        print(f"\n signing diploma...")
         #  Step 3: Sign the diploma 
         diploma_package = sign_diploma(final_diploma_data, final_hash, uni_id)
 
